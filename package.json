@@ -1,0 +1,14 @@
+{
+  "name": "7shifts",
+  "version": "1.0.0",
+  "description": "Coding task",
+  "main": "functions.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.0.6"
+  }
+}

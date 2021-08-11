@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>7shifts Task</title>
+  <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/buefy/dist/buefy.min.js"></script>
+  <script src="functions.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/buefy/dist/buefy.min.css">
+  <style>
+    section{
+      padding: 2rem !important;
+    }
+    .result{
+      font-family: monospace;
+      font-size: large;
+    }
+    .pageHeader{
+      background-color: #ddecf1;
+      color: #3092a5;
+      font-size: xx-large;
+      text-align: center;
+      padding: 2rem;
+      font-weight: bold;
+      box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19);
+    }
+  </style>
+</head>
+<body>
+  <section class="pageHeader" id="content4-n">
+    <div >7shifts Coding Task - String Calculator</div>
+  </section>
+  <div id="app">
+    <section class="section" >
+      <form id="formTest" @submit.prevent="send">
+        <div class="container">
+          <div class="columns is-centered is-multiline fs-xxl">
+            <div class="column is-half has-text-centered"> <b>{{ subtitle }}</b></div>
+          </div>
+          <div class="columns is-centered is-multiline">
+            <div class="column is-one-third">
+              <b-field label="Numbers">
+                <b-input id="numbers" v-model="numbers" type="text" required></b-input>
+              </b-field>
+            </div>
+          </div>
+          <div class="columns is-centered" v-if="exception">
+            <div class="column is-half has-text-centered has-text-danger"> 
+              <b>Please, check the errors:</b>
+              <p>{{ exception }}</p>              
+            </div>
+          </div>
+          <div class="columns is-centered" v-if="result">
+            <div class="column is-half has-text-centered"> 
+              <h3 class="has-text-danger"><b>Result</b></h3>
+              <span class="result">{{ result }}</span>
+            </div>
+          </div>
+          <div class="columns is-centered">
+            <div class="column is-half has-text-centered">
+              <button class="button is-primary is-rounded" type="submit">Add numbers</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </section>
+
+  </div>
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        exception: "",
+        subtitle: "By Luisa Escalona",
+        numbers: '',
+        result: ''
+      },
+      methods: {
+        send: function() {
+          var self = this;
+          self.$data.result = ""
+          self.$data.exception = ""
+          try{
+            var res = Add(self.$data.numbers)
+            self.$data.result = res.toString()
+          }
+          catch(error){
+            console.log("** Error **")
+            console.log(error.message)
+            self.$data.exception = error.message
+          }
+        }
+      }
+    })
+  </script>
+</body>
+</html>
