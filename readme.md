@@ -1,7 +1,7 @@
-Technical Interview - String Calculator
+String Calculator
 =======================================
 
-# Author Luisa Escalona <escalona.luisa@gmail.com>
+# Author Luisa Escalona 
 
 I developed a solution with VueJS and JavaScript in a Node project. To do the testing I used the Jest Testing Framework. 
 
@@ -33,4 +33,4 @@ These are the tests included in the file:
 
 To check some recent code I developed, please open the codingExample.js file with any text/code editor.
 
-If you have any question or comment, please send me a message to escalona.luisa@gmail.com
+If you have any question or comment, please send me a message
