@@ -12,22 +12,22 @@ To run it, just open the index.html file in a web browser and enter the string w
 To run the test file, open this folder from your terminal and run the command `npm run test` (you need node - npm installed).
 
 These are the tests included in the file:
-  ✓ Add(1,2,5) - Expected: 8 (11 ms)
-  ✓ Add(1\n,2,3) - Expected: 6 (1 ms)
-  ✓ Add(1,\n2,4) - Expected: 7 (1 ms)
-  ✓ Add(//;\n1;3;4) - Expected: 8 (1 ms)
-  ✓ Add(//;\n1;-3;2) - Expected to throw: Negatives not allowed: -3 (19 ms)
-  ✓ Add(//$\n1$2$3) - Expected: 6
-  ✓ Add(//@\n2@3@8) - Expected: 13
-  ✓ Add(//$$$$$\n1$$$$$2$$$$$9) - Expected: 12
-  ✓ Add(1,1001,2,9850) - Expected: 3
-  ✓ Add(2,1001) - Expected: 2 (1 ms)
-  ✓ Add(//***\n1***2***3) - Expected: 6 (1 ms)
-  ✓ Add(//@\n2@-3@8@-1) - Expected to throw: Negatives not allowed: -3,-1 (1 ms)
-  ✓ Add(1009,1001,2002,9850) - Expected: 0 (1 ms)
-  ✓ Add(//$\n5$5$,6) - Expected to throw: Invalid number: ,6 (1 ms)
-  ✓ Add([empty string]) - Expected: 0 (1 ms)
-  ✓ Add([blank space]) - Expected: 0
+  - Add(1,2,5) - Expected: 8 (11 ms)
+  - Add(1\n,2,3) - Expected: 6 (1 ms)
+  - Add(1,\n2,4) - Expected: 7 (1 ms)
+  - Add(//;\n1;3;4) - Expected: 8 (1 ms)
+  - Add(//;\n1;-3;2) - Expected to throw: Negatives not allowed: -3 (19 ms)
+  - Add(//$\n1$2$3) - Expected: 6
+  - Add(//@\n2@3@8) - Expected: 13
+  - Add(//$$$$$\n1$$$$$2$$$$$9) - Expected: 12
+  - Add(1,1001,2,9850) - Expected: 3
+  - Add(2,1001) - Expected: 2 (1 ms)
+  - Add(//***\n1***2***3) - Expected: 6 (1 ms)
+  - Add(//@\n2@-3@8@-1) - Expected to throw: Negatives not allowed: -3,-1 (1 ms)
+  - Add(1009,1001,2002,9850) - Expected: 0 (1 ms)
+  - Add(//$\n5$5$,6) - Expected to throw: Invalid number: ,6 (1 ms)
+  - Add([empty string]) - Expected: 0 (1 ms)
+  - Add([blank space]) - Expected: 0
 
 # Some recent code
 
